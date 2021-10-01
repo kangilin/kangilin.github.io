@@ -38,7 +38,13 @@ ga('send', 'pageview');
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v12.0" nonce="oDVM0m5q"></script>
 
-
+<script>
+　	window.fbAsyncInit = function() {
+　	FB.Event.subscribe('edge.create', function(targetUrl) {
+　	ga('send', 'social', 'facebook臉書', 'like按讚', '促銷優惠');
+　	});
+　	};
+　	</script>
 
 <div class="fb-like" data-href="https://kangilin.github.io/1001.html" data-width="200" data-layout="standard" data-action="like" data-size="large" data-share="false"></div>
 
